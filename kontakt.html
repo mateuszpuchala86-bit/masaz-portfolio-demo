@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt | Harmonia – Projekt demonstracyjny</title>
+<meta name="description" content="Przykładowa strona kontaktowa studia masażu Harmonia — projekt demonstracyjny prezentujący formularz kontaktowy i dane firmy.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://masaz-portfolio-demo.vercel.app/kontakt.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo">Harmonia <span>Masaż</span></a>
+    <div class="nav-links">
+      <a href="index.html">Strona główna</a>
+      <a href="oferta.html">Oferta</a>
+      <a href="realizacje.html">O nas</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <a href="tel:123456789" class="btn btn-primary nav-cta"><i class="fa-solid fa-phone"></i> Zadzwoń</a>
+    <button class="burger" id="burgerBtn" aria-label="Otwórz menu">☰</button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Strona główna</a>
+    <a href="oferta.html">Oferta</a>
+    <a href="realizacje.html">O nas</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="tel:123456789" style="border:none; color: var(--amber); font-weight:700;">Zadzwoń: 123 456 789</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Strona główna</a> / Kontakt</div>
+    <h1>Kontakt ze studiem Harmonia</h1>
+    <p class="lead">Zadzwoń, napisz albo wypełnij formularz poniżej — oddzwonimy i umówimy dogodny termin wizyty.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="ico"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h4>Adres studia</h4>
+            <p>ul. Przykładowa 12, 00-000 Miasto</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ico"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <h4>Telefon</h4>
+            <a href="tel:123456789">123 456 789</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ico"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h4>E-mail</h4>
+            <a href="mailto:kontakt@przyklad-demo.pl">kontakt@przyklad-demo.pl</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ico"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <h4>Godziny otwarcia</h4>
+            <p>Pon–Pt: 09:00–19:00<br>Sob: po uzgodnieniu telefonicznym</p>
+          </div>
+        </div>
+        <div class="map-embed">
+          <!-- EDIT: to jest projekt demonstracyjny — w realnym wdrożeniu podmień na embed z lokalizacją klienta -->
+          <iframe
+            src="https://www.google.com/maps?q=Warszawa&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Przykładowa mapa dojazdu — treść demonstracyjna">
+          </iframe>
+        </div>
+        <div class="contact-item">
+          <div class="ico"><i class="fa-solid fa-share-nodes"></i></div>
+          <div>
+            <h4>Media społecznościowe</h4>
+            <p><a href="#">Instagram</a> · <a href="#">Facebook</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>Umów wizytę</h3>
+        <p class="sub">Wypełnij formularz — oddzwonimy lub napiszemy, żeby ustalić szczegóły wizyty.</p>
+        <div class="form-success" id="formSuccess">Dziękujemy! Wiadomość została wysłana — odezwiemy się najszybciej, jak to możliwe.</div>
+        <!-- EDIT: podmień PLACEHOLDER na rzeczywisty identyfikator formularza Formspree przy wdrożeniu u klienta -->
+        <form id="contactForm" action="https://formspree.io/f/PLACEHOLDER" method="POST">
+          <div class="field">
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" id="name" name="name" placeholder="Jan Kowalski" required>
+          </div>
+          <div class="field">
+            <label for="email">Adres e-mail</label>
+            <input type="email" id="email" name="email" placeholder="jan.kowalski@email.pl" required>
+          </div>
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" placeholder="np. 500 100 200" required>
+          </div>
+          <div class="field">
+            <label for="message">Krótko opisz swój problem</label>
+            <textarea id="message" name="message" placeholder="Np. ból karku i napięcia mięśniowe utrzymujące się od kilku tygodni..."></textarea>
+          </div>
+          <div class="field-checkbox">
+            <input type="checkbox" id="rodo" name="rodo" required>
+            <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na zapytanie zgodnie z Polityką Prywatności.</label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Umów wizytę</button>
+          <p class="form-note">Twoje dane wykorzystamy wyłącznie do kontaktu w sprawie wizyty.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Harmonia — Studio Masażu</div>
+      <p>ul. Przykładowa 12, 00-000 Miasto · 123 456 789</p>
+    </div>
+    <ul class="footer-links">
+      <a href="index.html">Strona główna</a>
+      <a href="oferta.html">Oferta</a>
+      <a href="realizacje.html">O nas</a>
+      <a href="kontakt.html">Kontakt</a>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    © <span id="year"></span> Harmonia — Studio Masażu. Projekt demonstracyjny (portfolio), dane fikcyjne.
+  </div>
+</footer>
+
+<a href="kontakt.html" class="demo-ribbon"><i class="fa-solid fa-circle-info"></i> Projekt demonstracyjny</a>
+
+<script src="main.js"></script>
+</body>
+</html>
